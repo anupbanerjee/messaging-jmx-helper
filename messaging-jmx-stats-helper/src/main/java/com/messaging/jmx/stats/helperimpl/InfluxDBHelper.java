@@ -11,7 +11,7 @@ public class InfluxDBHelper {
 	private BatchPoints batchPoints;
 
 	private InfluxDBHelper() {
-		influxDB = InfluxDBFactory.connect("http://10.62.118.240:8086", "root", "root");
+		influxDB = InfluxDBFactory.connect("http://******:8086", "root", "root");
 		batchPoints = BatchPoints.database("amqdb").tag("async", "true").retentionPolicy("autogen")
 				.consistency(ConsistencyLevel.ALL).build();
 		System.out.println("Here");

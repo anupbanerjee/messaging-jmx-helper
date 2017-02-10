@@ -57,7 +57,7 @@ public class AMQStatisticsCollector {
 
 	public static void main(String args[]) {
 		AMQStatisticsCollector amqStatisticsCollector = new AMQStatisticsCollector();
-		connection = new Connection("172.16.10.206", "1099", "cep_di", "c3pd1");
+		connection = new Connection("****", "***", "*****", "****");
 		
 		try {
 			AMQStatisticsDAOImpl amqDao = new AMQStatisticsDAOImpl();
