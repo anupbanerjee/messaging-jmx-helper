@@ -1,5 +1,7 @@
 package com.messaging.jmx.stats.helper;
 
+import java.io.IOException;
+
 import javax.management.MBeanServerConnection;
 import javax.management.remote.JMXConnector;
 
@@ -11,10 +13,11 @@ public interface ConnectionHelper {
 	/*
 	 * The below method needs to be implemented to get JMXConnector object
 	 */
-	public JMXConnector getConnector() throws JmxConnectionException;
 	
-	public MBeanServerConnection openConnection(Connection connection, JMXConnector connector ) throws JmxConnectionException;
+	public JMXConnector getConnector(Connection connectionParams) throws JmxConnectionException, IOException;
 	
-	public void closeConnection(MBeanServerConnection connection) throws JmxConnectionException; 
+	public MBeanServerConnection openConnection(JMXConnector connector) throws JmxConnectionException, IOException;
+	
+	public void closeConnection(JMXConnector connector) throws JmxConnectionException, IOException;
 	
 }

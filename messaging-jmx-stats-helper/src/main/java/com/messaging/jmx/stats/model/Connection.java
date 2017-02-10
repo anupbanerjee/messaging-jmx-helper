@@ -1,6 +1,6 @@
 package com.messaging.jmx.stats.model;
 
-public abstract class Connection {
+public class Connection {
 	
 	private final String hostname;
 	

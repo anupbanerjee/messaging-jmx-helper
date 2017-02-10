@@ -1,6 +1,6 @@
 package com.messaging.jmx.stats.model;
 
-public abstract class Message {
+public class Message {
 	
 	private final String queueName;
 	
@@ -38,7 +38,7 @@ public abstract class Message {
 
 	@Override
 	public String toString() {
-		return "JMSMessage [queueName=" + queueName + ", queueSize=" + queueSize + ", messageEnqueued="
+		return "Message [queueName=" + queueName + ", queueSize=" + queueSize + ", messageEnqueued="
 				+ messageEnqueued + ", messageDequeued=" + messageDequeued + "]";
 	}
 	
